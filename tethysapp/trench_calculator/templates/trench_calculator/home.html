@@ -1,0 +1,41 @@
+{% extends "trench_calculator/base.html" %}
+{% load tethys_gizmos %}
+
+{% block header_buttons %}
+{% endblock %}
+
+{% block app_content %}
+<!--Home should open a "home page" with the name of the class, name of your app, date, assignment number and main assignment requirements listed.-->
+<h1>Welcome to the Trench Calculator App!</h1>
+<br>
+<h4>Class Name: <span>CE En 514 - Geospatial Software Development</span></h4>
+<h4>Group: <span>Pawnee Rangers</span></h4>
+<h4>App Name: <span>Trench Import and Export Calculator</span></h4>
+<h4>Assignment Number: <span>?</span></h4>
+<h4>Main Assignment Requirements: <span>Build a new Tethys app called "mapapp" on your Ubuntu server, using the scaffold command.
+Remove all of the default content of the app while keeping the side bar, bottom, top, and main app areas - just remove the excess HTML.
+Create 4 links on the sidebar:
+Home,
+Map View,
+Data Services, and
+About.
+Each of these links should open a new page in the main view.
+Home should open a "home page" with the name of the class, name of your app, date, assignment number and main assignment requirements listed.
+Map View should include an ArcMap Javascript API map with two data sets from your ArcMap Geoserver2 server, toggle buttons to turn off and on a raster layer and vector layer, and popup bubbles with information about the features in your map
+Data Services will be a page that talks about the data services you have used in your map, how you created the data, where you are hosting the data, what data is included, and any additional data about your data. Also include a link to the geoserver2 data view page for your data.
+About - the about page will include a picture of you, a link to send you an email, and a little bit about who you are.
+Submit a document with screenshots showing all required elements running on your computer.
+Be prepared to do a quick 2 minute demo of your app in class on Tuesday. </span></h4>
+
+{% endblock %}
+
+{# Use the after_app_content block for modals #}
+{% block after_app_content %}
+{% endblock %}
+
+{% block app_actions %}
+{% endblock %}
+
+{% block scripts %}
+  {{ block.super }}
+{% endblock %}

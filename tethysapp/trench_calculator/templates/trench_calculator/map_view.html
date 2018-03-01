@@ -1,0 +1,109 @@
+{% extends "trench_calculator/base.html" %}
+{% load tethys_gizmos %}
+
+{% block header_buttons %}
+  <div class="header-button glyphicon-button" data-toggle="tooltip" data-placement="bottom" title="Help">
+    <a data-toggle="modal" data-target="#help-modal"><span class="glyphicon glyphicon-question-sign"></span></a>
+  </div>
+{% endblock %}
+
+{% block app_content %}
+    <div class="Intro">
+        <h1 id="title" align="center">Trench Offhaul and Import Calculator</h1>
+        <p align="center">This app allows the user to calculate how much soil will be excavated when installing a pipe and how much soil will need
+        to imported for bedding and backfill.</p>
+    </div>
+    <br>
+    <br>
+    <div id="map">
+    </div>
+    <br>
+    <br>
+	<div id="toggles" align="center">
+		DEM: <input type="checkbox" id="dem" checked>
+		Municipalities: <input type="checkbox" id="mun" checked>
+	</div>
+    <div id="buttons">
+        <button type="button">Calculate Soil Quantities</button>
+    </div>
+    <br>
+    <div id="results">
+        <h2 align="center">Results</h2>
+        <table id="resulttable">
+          <tr>
+            <th>Export</th>
+            <th>Bedding Import</th>
+            <th>Backfill Import</th>
+          </tr>
+          <tr>
+            <td>1000 CY</td>
+            <td>300 CY</td>
+            <td>650 CY</td>
+          </tr>
+        </table>
+    </div>
+{% endblock %}
+
+{# Use the after_app_content block for modals #}
+{% block after_app_content %}
+{% endblock %}
+
+{% block app_actions %}
+{% endblock %}
+
+{% block scripts %}
+  {{ block.super }}
+  <script>
+    require([
+        "esri/Map",
+        "esri/layers/FeatureLayer",
+        "esri/layers/MapImageLayer",
+        "esri/views/MapView",
+        "dojo/dom",
+        "dojo/on",
+        "dojo/domReady!",
+    ], function(Map, FeatureLayer, MapImageLayer, MapView, dom, on) {
+        var map = new Map ({
+            basemap: "streets"
+        });
+
+        var template = {
+            title: "Utah Valley Municipalities",
+            content: "<p>{NAME}</p>"
+        };
+
+        var municipalities_lyr = new FeatureLayer ({
+            url: "http://geoserver2.byu.edu/arcgis/rest/services/PawneeRangers/Municipalities/MapServer",
+            outFields: ["*"],
+            popupTemplate : template
+        });
+
+        var dem_lyr = new MapImageLayer ({
+           url: "http://geoserver2.byu.edu/arcgis/rest/services/PawneeRangers/DEM/MapServer"
+        });
+
+        map.layers.add(dem_lyr);
+        map.layers.add(municipalities_lyr);
+
+
+        var view = new MapView ({
+            container: "map",
+            map: map,
+            center: [-112.1,40],
+            zoom: 8
+        });
+
+        var demtoggle = dom.byId("dem");
+        on(demtoggle,"change",function(){
+            dem_lyr.visible = demtoggle.checked;
+        });
+
+        var muntoggle = dom.byId("mun");
+        on(muntoggle,"change",function(){
+            municipalities_lyr.visible = muntoggle.checked;
+        });
+
+    });
+
+  </script>
+{% endblock %}

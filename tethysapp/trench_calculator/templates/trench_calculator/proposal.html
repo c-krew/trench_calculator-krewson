@@ -1,0 +1,309 @@
+{% extends "trench_calculator/base.html" %}
+
+
+
+{% block app_content %}
+
+    <div class=WordSection1>
+
+        <p align="center">*Note: project changed after this proposal was written*</p>
+
+        <p class=MsoNormal style='margin-top:11.0pt;margin-right:0in;margin-bottom:
+        11.0pt;margin-left:0in;border:none'><b><span lang=EN style='font-size:14.0pt;
+        line-height:115%;font-family:"Times New Roman",serif;color:#444444'>Overview</span></b></p>
+
+        <p class=MsoNormal style='margin-top:11.0pt;margin-right:0in;margin-bottom:
+        11.0pt;margin-left:0in;line-height:150%;border:none'><span lang=EN
+        style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+        color:#444444'>            The main purpose of this project is to provide a
+        tethys application that can be used for least cost path analysis. Unlike
+        previous 414 projects that used least cost path for specific tasks, our web
+        application will provide enough functionality to analyze least cost paths for a
+        variety of purposes. Whether a user wants to find the safest route for a bike
+        race, best location for a pipeline, fastest route to a certain location, or any
+        other path related purpose, our application will be able to provide a solution.
+        </span></p>
+
+        <p class=MsoNormal style='margin-top:11.0pt;margin-right:0in;margin-bottom:
+        11.0pt;margin-left:0in;line-height:150%;border:none'><span lang=EN
+        style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+        color:#444444'>            In order to accomplish this purpose, our application
+        will also have a variety of layers that can be toggled on and off and analyzed
+        with arcgis tools such as buffer, intersect, clip, etc. The user will be able
+        to select which layers they want to use for their analysis as well as the
+        starting and end locations for their paths. </span></p>
+
+        <p class=MsoNormal style='margin-top:11.0pt;margin-right:0in;margin-bottom:
+        11.0pt;margin-left:0in;line-height:150%;border:none'><b><span lang=EN
+        style='font-size:14.0pt;line-height:150%;font-family:"Times New Roman",serif;
+        color:#444444'>Responsibilities</span></b></p>
+
+        <p class=MsoNormal style='margin-top:11.0pt;margin-right:0in;margin-bottom:
+        11.0pt;margin-left:0in;text-indent:.5in;line-height:150%;border:none'><span
+        lang=EN style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+        color:#444444'>For this project, there are three main areas of focus. Each of
+        us will lead an area of focus for this project. The first area is gathering and
+        storing the data that the application can use. It is important to know how each
+        dataset is structured so that the results from the geoprocessing workflow are
+        viable. Jordi will lead out the data aspect of this project. </span></p>
+
+        <p class=MsoNormal style='margin-top:11.0pt;margin-right:0in;margin-bottom:
+        11.0pt;margin-left:0in;text-indent:.5in;line-height:150%;border:none'><span
+        lang=EN style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+        color:#444444'>The second area is the back-end of the application. This
+        includes how the app will analyze the data and produce the desired results. The
+        back-end will focus on how the application communicates with the user and the
+        server. Corey will be leading out the back-end aspect for this application. </span></p>
+
+        <p class=MsoNormal style='margin-top:11.0pt;margin-right:0in;margin-bottom:
+        11.0pt;margin-left:0in;text-indent:.5in;line-height:150%;border:none'><span
+        lang=EN style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+        color:#444444'>The last area of focus in the front-end of the application. This
+        area will focus on the visualization and how the results of the analysis will
+        be displayed for the user. It will also focus on providing a simple, yet
+        extensive, interface so that the user can select what parameters will be used
+        for the analysis. Ken will be the lead for the front-end aspect of the project.
+        </span></p>
+
+        <p class=MsoNormal style='margin-top:11.0pt;margin-right:0in;margin-bottom:
+        11.0pt;margin-left:0in;border:none'><b><span lang=EN style='font-size:14.0pt;
+        line-height:115%;font-family:"Times New Roman",serif;color:#444444'>&nbsp;</span></b></p>
+
+        <p class=MsoNormal style='margin-top:11.0pt;margin-right:0in;margin-bottom:
+        11.0pt;margin-left:0in;border:none'><b><span lang=EN style='font-size:14.0pt;
+        line-height:115%;font-family:"Times New Roman",serif;color:#444444'>Data</span></b><b><span
+        lang=EN style='font-size:12.0pt;line-height:115%;font-family:"Times New Roman",serif;
+        color:#444444'> </span></b></p>
+
+        <p class=MsoNormal style='margin-top:11.0pt;margin-right:0in;margin-bottom:
+        11.0pt;margin-left:0in;line-height:150%;border:none'><span lang=EN
+        style='font-size:10.0pt;line-height:150%;color:#444444'>            </span><span
+        lang=EN style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+        color:#444444'>Various types of vector and raster data analyses will be needed
+        in order to allow the kind of flexibility and user-customizability that is
+        desired for this project. Tools such as buffer, multi-ring buffer, clip, mosaic
+        to new raster, intersect, raster calculator, and cost path are all expected to
+        be used extensively. As the project progresses, it will become more readily
+        apparent what types of data and data tools will be utilized in the application.</span></p>
+
+        <p class=MsoNormal style='margin-top:14.0pt;margin-right:0in;margin-bottom:
+        20.0pt;margin-left:0in;text-indent:.5in;line-height:150%;border:none'><span
+        lang=EN style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+        color:#444444'>It is anticipated that a wide variety of data should be
+        distributed to the app from map services, etc. The more data that is available
+        to the app, the more diverse the applications for least-cost path scenarios.
+        These data are likely to include (depending upon availability) city and county
+        boundary data, roadway networks, landuse and parcel ownership, utility data,
+        canals, rivers and streams, traffic count data, transit route data, elevation
+        DEM data, water-table data, city zoning data, etc. All of these data-sets will
+        serve to make the application completely configurable for any type of
+        engineering least-cost path analysis that would be needed in the state of Utah.
+        </span></p>
+
+        <p class=MsoNormal style='margin-top:11.0pt;margin-right:0in;margin-bottom:
+        11.0pt;margin-left:0in;border:none'><b><span lang=EN style='font-size:14.0pt;
+        line-height:115%;font-family:"Times New Roman",serif;color:#444444'>Back-End</span></b><b><span
+        lang=EN style='font-size:12.0pt;line-height:115%;font-family:"Times New Roman",serif;
+        color:#444444'> </span></b></p>
+
+        <p class=MsoNormal style='margin-top:11.0pt;margin-right:0in;margin-bottom:
+        11.0pt;margin-left:0in;text-indent:.5in;line-height:150%;border:none'><span
+        lang=EN style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+        color:#444444'>The workflows will be very similar to much of the 414 projects
+        that used least cost path. The main tool that will be used is cost path but
+        buffers, intersects, and other tools will be used as well. The user will be
+        allowed to select which layers they would like to use and then define how much
+        to buffer and weight each layer they have selected. The user will also select
+        their starting and ending locations. When the parameters are set, we will send
+        the user information to the server and the server will follow a similar pattern
+        to the modelbuilders of the 414 projects that did least cost path. It will
+        buffer the layers, convert them to raster, reclassify the values, calculate
+        values, find cost distance, and then determine the least cost path. The results
+        will be sent back to the app and displayed on the map. </span></p>
+
+        <p class=MsoNormal style='margin-top:11.0pt;margin-right:0in;margin-bottom:
+        11.0pt;margin-left:0in;text-indent:.5in;line-height:150%;border:none'><span
+        lang=EN style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+        color:#444444'>Based on the size of the data and the layers selected, the
+        processing time may be an issue. We will limit our scope to Utah but if
+        processing time is too much, we may have to limit it to a county or two in
+        Utah. We may have to limit the amount of layers that can be selected or the
+        user will be waiting for a very long time and not want to use it. </span></p>
+
+        <p class=MsoNormal style='margin-top:11.0pt;margin-right:0in;margin-bottom:
+        11.0pt;margin-left:0in;text-indent:.5in;line-height:150%;border:none'><span
+        lang=EN style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+        color:#444444'>This code will be stored on Corey Krewson’s GitHub account
+        (krewgar). We will also provide a readme file on github which will describe how
+        the app is set up and how to install it. </span></p>
+
+        <p class=MsoNormal style='margin-top:11.0pt;margin-right:0in;margin-bottom:
+        11.0pt;margin-left:0in;border:none'><b><span lang=EN style='font-size:14.0pt;
+        line-height:115%;font-family:"Times New Roman",serif;color:#444444'>Front-End</span></b></p>
+
+        <p class=MsoNormal style='margin-top:11.0pt;margin-right:0in;margin-bottom:
+        11.0pt;margin-left:0in;text-indent:.5in;line-height:150%;border:none'><span
+        lang=EN style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+        color:#444444'>We want the front end user interface to be simple and intuitive
+        while still offering a wide range of options for the user. The purpose of this
+        app is not to replace the least cost path functionality of ArcMap, but to offer
+        a quick, streamlined option for users. The layout will be similar to ArcMap
+        with a large map being the main view and a sidebar with a list of active
+        layers. Clicking on these layers should allow the user to define their buffers
+        and weights with sliders. Additionally, the user interface will include options
+        for creating a start and end point, and a button for recalculating the least
+        cost path. There will also be an input for users to define what they are
+        creating. We will include some basic options such as roads, pipelines, and
+        power lines, but the user should be able to create their own. Due to the large
+        amount of user input, we will use modals for much of this input. </span></p>
+
+        <p class=MsoNormal style='margin-top:11.0pt;margin-right:0in;margin-bottom:
+        11.0pt;margin-left:0in;text-indent:.5in;line-height:150%;border:none'><span
+        lang=EN style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+        color:#444444'>We might be able to use AJAX to update the path in real time as
+        the user edits options, but this will depend on how long the calculation takes.
+        Additionally, we may include options to allow the user to use lines and
+        polygons in addition to points for their start and end features. Although some
+        data will be included with the app, we would like to allow users to upload
+        their own data if they want. As we develop the app we will some of these
+        additional features, but our goal is to ultimately provide a pleasant user
+        experience, not the full functionality of ArcMap.</span></p>
+
+        <p class=MsoNormal style='margin-top:11.0pt;margin-right:0in;margin-bottom:
+        11.0pt;margin-left:0in;line-height:150%;border:none'><b><span lang=EN
+        style='font-size:14.0pt;line-height:150%;font-family:"Times New Roman",serif;
+        color:#444444'>License</span></b></p>
+
+        <p class=MsoNormal style='margin-top:11.0pt;margin-right:0in;margin-bottom:
+        11.0pt;margin-left:0in;line-height:150%;border:none'><span lang=EN
+        style='font-size:14.0pt;line-height:150%;font-family:"Times New Roman",serif;
+        color:#444444'>         </span><span lang=EN style='font-size:12.0pt;
+        line-height:150%;font-family:"Times New Roman",serif;color:#444444'>We want our
+        app to be open-source, so we will be using the General Public License for our
+        app. This license allows us to distribute and modify the application in any way
+        we see fit, and anyone who receives the software will have the same rights.
+        Basically, this license provides basic protections for both the authors and the
+        users of the software.</span></p>
+
+    </div>
+
+{% endblock %}
+
+
+{% block scripts %}
+  {{ block.super }}
+    <style>
+    <!--
+     /* Font Definitions */
+     @font-face
+        {font-family:"Cambria Math";
+        panose-1:2 4 5 3 5 4 6 3 2 4;}
+     /* Style Definitions */
+     p.MsoNormal, li.MsoNormal, div.MsoNormal
+        {margin:0in;
+        margin-bottom:.0001pt;
+        line-height:115%;
+        font-size:11.0pt;
+        font-family:"Arial",sans-serif;
+        color:black;}
+    h1
+        {margin-top:20.0pt;
+        margin-right:0in;
+        margin-bottom:6.0pt;
+        margin-left:0in;
+        line-height:115%;
+        page-break-after:avoid;
+        font-size:20.0pt;
+        font-family:"Arial",sans-serif;
+        color:black;
+        font-weight:normal;}
+    h2
+        {margin-top:.25in;
+        margin-right:0in;
+        margin-bottom:6.0pt;
+        margin-left:0in;
+        line-height:115%;
+        page-break-after:avoid;
+        font-size:16.0pt;
+        font-family:"Arial",sans-serif;
+        color:black;
+        font-weight:normal;}
+    h3
+        {margin-top:16.0pt;
+        margin-right:0in;
+        margin-bottom:4.0pt;
+        margin-left:0in;
+        line-height:115%;
+        page-break-after:avoid;
+        font-size:14.0pt;
+        font-family:"Arial",sans-serif;
+        color:#434343;
+        font-weight:normal;}
+    h4
+        {margin-top:14.0pt;
+        margin-right:0in;
+        margin-bottom:4.0pt;
+        margin-left:0in;
+        line-height:115%;
+        page-break-after:avoid;
+        font-size:12.0pt;
+        font-family:"Arial",sans-serif;
+        color:#666666;
+        font-weight:normal;}
+    h5
+        {margin-top:12.0pt;
+        margin-right:0in;
+        margin-bottom:4.0pt;
+        margin-left:0in;
+        line-height:115%;
+        page-break-after:avoid;
+        font-size:11.0pt;
+        font-family:"Arial",sans-serif;
+        color:#666666;
+        font-weight:normal;}
+    h6
+        {margin-top:12.0pt;
+        margin-right:0in;
+        margin-bottom:4.0pt;
+        margin-left:0in;
+        line-height:115%;
+        page-break-after:avoid;
+        font-size:11.0pt;
+        font-family:"Arial",sans-serif;
+        color:#666666;
+        font-weight:normal;
+        font-style:italic;}
+    p.MsoTitle, li.MsoTitle, div.MsoTitle
+        {margin-top:0in;
+        margin-right:0in;
+        margin-bottom:3.0pt;
+        margin-left:0in;
+        line-height:115%;
+        page-break-after:avoid;
+        font-size:26.0pt;
+        font-family:"Arial",sans-serif;
+        color:black;}
+    p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+        {margin-top:0in;
+        margin-right:0in;
+        margin-bottom:16.0pt;
+        margin-left:0in;
+        line-height:115%;
+        page-break-after:avoid;
+        font-size:15.0pt;
+        font-family:"Arial",sans-serif;
+        color:#666666;}
+    .MsoChpDefault
+        {font-size:11.0pt;
+        font-family:"Arial",sans-serif;
+        color:black;}
+    .MsoPapDefault
+        {line-height:115%;}
+    @page WordSection1
+        {size:8.5in 11.0in;
+        margin:1.0in 1.0in 1.0in 1.0in;}
+    div.WordSection1
+        {page:WordSection1;}
+    -->
+    </style>
+{% endblock %}

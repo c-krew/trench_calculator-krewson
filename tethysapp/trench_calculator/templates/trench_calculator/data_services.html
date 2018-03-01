@@ -1,0 +1,24 @@
+{% extends "trench_calculator/base.html" %}
+{% load tethys_gizmos %}
+
+
+
+{% block app_content %}
+<!--Data Services will be a page that talks about the data services you have used in your map, how you created the data,
+where you are hosting the data, what data is included, and any additional data about your data.
+Also include a link to the geoserver2 data view page for your data.-->
+<h2>Data Services!</h2>
+<br>
+<h4>Data Services: <span>The main data service that we have used so far is the ArcGIS server. This server allows us to store shapefiles
+and then retrieve them inside of our application.</span></h4>
+<h4>Data Creation: <span>The data that we are using was found from <a href = "https://gis.utah.gov/data/">gis.utah.gov</a>. We clipped the
+municipalities data so that it only showed Utah valley.</span></h4>
+<h4>Data Hosting: <span>The url for the Geoserver that we are using is <a href = "http://geoserver2.byu.edu/arcgis/rest">http://geoserver2.byu.edu/arcgis/rest</a>.</span></h4>
+<h4>Data Types: <span>The two types of data that we are using is a DEM and a vector shapefile of the municipalities in Utah Valley</span></h4>
+
+
+{% endblock %}
+
+{% block app_actions %}
+{% endblock %}
+

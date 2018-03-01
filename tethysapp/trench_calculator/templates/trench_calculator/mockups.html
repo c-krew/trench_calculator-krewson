@@ -1,0 +1,175 @@
+{% extends "trench_calculator/base.html" %}
+
+{% load staticfiles %}
+
+
+{% block scripts %}
+  {{ block.super }}
+    <style>
+        <!--
+         /* Font Definitions */
+         @font-face
+            {font-family:"Cambria Math";
+            panose-1:2 4 5 3 5 4 6 3 2 4;}
+         /* Style Definitions */
+         p.MsoNormal, li.MsoNormal, div.MsoNormal
+            {margin:0in;
+            margin-bottom:.0001pt;
+            line-height:115%;
+            font-size:11.0pt;
+            font-family:"Arial",sans-serif;
+            color:black;}
+        h1
+            {margin-top:20.0pt;
+            margin-right:0in;
+            margin-bottom:6.0pt;
+            margin-left:0in;
+            line-height:115%;
+            page-break-after:avoid;
+            font-size:20.0pt;
+            font-family:"Arial",sans-serif;
+            color:black;
+            font-weight:normal;}
+        h2
+            {margin-top:.25in;
+            margin-right:0in;
+            margin-bottom:6.0pt;
+            margin-left:0in;
+            line-height:115%;
+            page-break-after:avoid;
+            font-size:16.0pt;
+            font-family:"Arial",sans-serif;
+            color:black;
+            font-weight:normal;}
+        h3
+            {margin-top:16.0pt;
+            margin-right:0in;
+            margin-bottom:4.0pt;
+            margin-left:0in;
+            line-height:115%;
+            page-break-after:avoid;
+            font-size:14.0pt;
+            font-family:"Arial",sans-serif;
+            color:#434343;
+            font-weight:normal;}
+        h4
+            {margin-top:14.0pt;
+            margin-right:0in;
+            margin-bottom:4.0pt;
+            margin-left:0in;
+            line-height:115%;
+            page-break-after:avoid;
+            font-size:12.0pt;
+            font-family:"Arial",sans-serif;
+            color:#666666;
+            font-weight:normal;}
+        h5
+            {margin-top:12.0pt;
+            margin-right:0in;
+            margin-bottom:4.0pt;
+            margin-left:0in;
+            line-height:115%;
+            page-break-after:avoid;
+            font-size:11.0pt;
+            font-family:"Arial",sans-serif;
+            color:#666666;
+            font-weight:normal;}
+        h6
+            {margin-top:12.0pt;
+            margin-right:0in;
+            margin-bottom:4.0pt;
+            margin-left:0in;
+            line-height:115%;
+            page-break-after:avoid;
+            font-size:11.0pt;
+            font-family:"Arial",sans-serif;
+            color:#666666;
+            font-weight:normal;
+            font-style:italic;}
+        p.MsoTitle, li.MsoTitle, div.MsoTitle
+            {margin-top:0in;
+            margin-right:0in;
+            margin-bottom:3.0pt;
+            margin-left:0in;
+            line-height:115%;
+            page-break-after:avoid;
+            font-size:26.0pt;
+            font-family:"Arial",sans-serif;
+            color:black;}
+        p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+            {margin-top:0in;
+            margin-right:0in;
+            margin-bottom:16.0pt;
+            margin-left:0in;
+            line-height:115%;
+            page-break-after:avoid;
+            font-size:15.0pt;
+            font-family:"Arial",sans-serif;
+            color:#666666;}
+        .MsoChpDefault
+            {font-size:11.0pt;
+            font-family:"Arial",sans-serif;
+            color:black;}
+        .MsoPapDefault
+            {line-height:115%;}
+        @page WordSection1
+            {size:8.5in 11.0in;
+            margin:1.0in 1.0in 1.0in 1.0in;}
+        div.WordSection1
+            {page:WordSection1;}
+        -->
+    </style>
+{% endblock %}
+
+
+
+{% block app_content %}
+
+
+    <div class=WordSection1>
+
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN><img
+    width=468 height=300 id=image8.png src={% static 'trench_calculator/images/mock1.png' %}></span></p>
+
+    <p class=MsoNormal><span lang=EN>&nbsp;</span></p>
+
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN>Main
+    part of the screen is a map where the user can indicate start and end points
+    for their pipes. After that they need to setup the pipe zone profile.</span></p>
+
+    <br>
+    <br>
+
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN><img
+    width=468 height=338 id=image4.png src={% static 'trench_calculator/images/mock2.png' %}></span></p>
+
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN>To
+    decrease chances of the walls caving in, the top part of the trench is larger
+    than the bottom. Here the user can also indicate pipe size and the bedding
+    dimensions. The backfill depths will be calculated from the DEM and the start
+    and end locations that user indicated.</span></p>
+
+    <br>
+    <br>
+
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN><img
+    width=468 height=336 id=image3.png src={% static 'trench_calculator/images/mock3.png' %}></span></p>
+
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN>After
+    the pipeline has been submitted, the viewer can see the side profile of the pipe.
+    This will show the existing surface elevations with the desired pipe
+    elevations. It will also indicate how much soil needs to be excavated.</span></p>
+
+    <br>
+    <br>
+
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN><img
+    width=468 height=336 id=image6.png src={% static 'trench_calculator/images/mock4.png' %}></span></p>
+
+    <p class=MsoNormal><span lang=EN>&nbsp;</span></p>
+
+    <p class=MsoNormal align=center style='text-align:center'><span lang=EN>The
+    summary table will shows the volume of excavation as well as how much backfill
+    and bedding import is needed based on the pipe zone details.</span></p>
+
+{% endblock %}

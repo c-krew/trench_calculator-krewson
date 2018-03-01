@@ -1,0 +1,18 @@
+{% extends "trench_calculator/base.html" %}
+{% load tethys_gizmos %}
+
+{% load staticfiles %}
+
+{% block app_content %}
+<!--the about page will include a picture of you, a link to send you an email, and a little bit about who you are.-->
+<h4>About me: <span>I am a master's student working for Dr. Nelson. I love to be outdoors and be in nature. I enjoy snowboarding in the winters
+and playing soccer and golf in the summers. I have been married for 2 and half years now and my wife teaches math at Payson
+High School.</span></h4>
+<img id="pic" src="{% static 'trench_calculator/images/mypic.JPG' %}" width="50%">
+Feel free to send me an email at <a href="mailto:coreykrewson@gmail.com?Subject=Hello" target="_top">coreykrewson@gmail.com</a> if you have any questions.
+
+{% endblock %}
+
+{% block app_actions %}
+{% endblock %}
+
