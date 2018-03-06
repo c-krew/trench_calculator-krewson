@@ -53,7 +53,7 @@ class TrenchCalculator(TethysAppBase):
                 name='mockups',
                 url='trench-calculator/mockups',
                 controller='trench_calculator.controllers.mockups'
-            ),
+            )
         )
 
         return url_maps
