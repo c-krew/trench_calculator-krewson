@@ -25,9 +25,14 @@
     text-align:center;
 }
 
-#resultmod {
-    width: 500px;
+#resulttable {
+    width: 300px;
     margin-left: auto;
     margin-right: auto;
-    }
+}
 
+#resultmod {
+    padding-left:400px;
+    padding-right: 400px;
+    padding-top:200px;
+}

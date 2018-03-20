@@ -102,8 +102,6 @@ def map_view(request):
                                 condensed=True
                             )
 
-
-
     context = {
         'toggledem':toggledem,
         'toggle_switch_mun': toggle_switch_mun,
