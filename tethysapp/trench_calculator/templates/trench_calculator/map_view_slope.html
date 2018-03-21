@@ -1,0 +1,81 @@
+{% extends "trench_calculator/base.html" %}
+{% load tethys_gizmos %}
+
+{% load staticfiles %}
+
+{% block header_buttons %}
+  <div class="header-button glyphicon-button" data-toggle="tooltip" data-placement="bottom" title="Help">
+    <a data-toggle="modal" data-target="#help-modal"><span class="glyphicon glyphicon-question-sign"></span></a>
+  </div>
+{% endblock %}
+
+{% block app_content %}
+    <div class="Intro">
+        <h1 id="title" align="center">Trench Offhaul and Import Calculator</h1>
+        <p align="center">This app allows the user to calculate how much soil will be excavated when installing a pipe and how much soil will need
+        to imported for bedding and backfill.</p>
+    </div>
+    <br>
+    <br>
+    <div id="mapslope">
+        <div id="topbar">
+          <button class="action-button esri-icon-polyline" id="polylineButton" type="button"
+            title="Draw polyline"></button>
+          <button class="action-button esri-icon-trash" id="resetBtn" type="button" title="Clear graphics"></button>
+        </div>
+    </div>
+    <br>
+    <br>
+	<div id="percent" align="center">
+        {% gizmo percent_input %}
+	</div>
+    <div class="buttons" align="center">
+        {% gizmo dimensionsbut %}
+        {% gizmo results %}
+    </div>
+{% endblock %}
+
+{# Use the after_app_content block for modals #}
+{% block after_app_content %}
+    <form id="dimensionmod" class="modal fade" role="dialog" >
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <h5 align="center">Input Dimensions</h5>
+            <div id="dimtable">
+                {% gizmo dimension_edit %}
+            </div>
+            <img id="trenchprofile" src="{% static 'trench_calculator/images/trenchprofile.png' %}">
+            <div id="modalbut">
+                {% gizmo calculate %}
+            </div>
+        </div>
+        <!--End modal content-->
+    </div>
+    </form>
+
+
+    <form id="resultmod" class="modal fade" role="dialog" >
+    <div id="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <h5 align="center">Results</h5>
+            <div id="resulttable">
+                {% gizmo resulttable %}
+            </div>
+        </div>
+        <!--End modal content-->
+    </div>
+    </form>
+{% endblock %}
+
+{% block app_actions %}
+{% endblock %}
+
+{% block scripts %}
+  {{ block.super }}
+  <script>
+
+
+  </script>
+{% endblock %}
