@@ -19,6 +19,13 @@
     margin-right: auto;
     }
 
+#mapsplitline {
+    height:400px;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
 #buttons {
     text-align:center;
     }

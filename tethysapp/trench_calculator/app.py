@@ -45,6 +45,11 @@ class TrenchCalculator(TethysAppBase):
                 controller='trench_calculator.controllers.map_view_slope'
             ),
             UrlMap(
+                name='map_view_split',
+                url='trench-calculator/map_view_split',
+                controller='trench_calculator.controllers.map_view_split'
+            ),
+            UrlMap(
                 name='data_services',
                 url='trench-calculator/data_services',
                 controller='trench_calculator.controllers.data_services'
